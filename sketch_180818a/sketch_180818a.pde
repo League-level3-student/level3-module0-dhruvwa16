@@ -13,7 +13,8 @@ void setup() {
   //4. initialize the ints in the array with random numbers
   //   from 0 to the built in height variable
       for(int i=0; i<height; i++){
-        ints[i] = i;
+           ints[i] = (int) random(height+1);
+        
   
       }
   //5. call the noStroke() method
@@ -30,8 +31,8 @@ void draw() {
     color(255,255,255);
 
   //8. draw a rectangle for each int in your array.
-      for(int i=0; i<height; i++){
-          rect(ints[i], height, 1, -ints[i]);
+      for(int i=0; i<ints.length; i++){
+          rect(i, height, 1, -ints[i]);
       }
   //   the x value will be the index of the int
   //   the y value will the height variable
@@ -46,12 +47,15 @@ void draw() {
   //10. extract the code that randomizes the array into a method.
   void method(){
             for(int i=0; i<height; i++){
-        ints[i] = i;
+              ints[i] = (int) random(height+1);
+            }
+      }  
   
-      }
-  }
+  
   //11. call the method you made in step 10 when the mouse is pressed
-
+  void mousePressed(){
+    method();
+  }
 
 void stepSort(int[] arr) {
   for (int i = 1; i < arr.length; i++) {
