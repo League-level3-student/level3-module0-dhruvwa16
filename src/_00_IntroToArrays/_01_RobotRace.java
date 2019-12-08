@@ -16,6 +16,7 @@ public class _01_RobotRace {
 				robots[i] = new Robot();
 				robots[i].setX(100*i+230);
 				robots[i].setY(520);
+				robots[i].turn(45);
 			}
 					
 
@@ -60,6 +61,7 @@ public class _01_RobotRace {
 		//8. try different races with different amounts of robots.
     	
 	    //9. make the robots race around a circular track.
+				
 
 }
 }
